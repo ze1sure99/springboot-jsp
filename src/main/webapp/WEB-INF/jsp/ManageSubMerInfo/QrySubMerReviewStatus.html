@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>农行线上支付平台-商户接口范例-二级商户查询申请单状态</title>
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../demo/css/semantic.css">
+    <script src="../../../../../../../../../demo/js/jquery.min.js"></script>
+    <script src="../../../../../../../../../demo/js/semantic.js"></script>
+    <script src="../../../../../../../../../demo/js/util.js"></script>
+</head>
+<script language="javascript">
+    function formatIndex(index) {
+        if(index < 10)
+            return "00" + index ;
+        else if(index >= 10 && index < 100)
+            return "0" + index ;
+        else
+            return index ;
+    }
+    function submitFun() {
+        form1.submit() ;
+    }
+</script>
+<body style="font-size: 14px;">
+<center>二级商户信息同步</center>
+<form id="form1" action='QrySubMerReviewStatus.jsp' method="post">
+    <Label ID="lblMessage"></Label>
+    <br />
+    <table>
+        <tr>
+            <td>二级商户编号</td>
+            <td><input name='txtSubMerId' value='103881920000002' />*必输</td>
+        </tr>
+        <tr>
+            <td>申请单编号</td>
+            <td><input name='txtSerialNo' value='' />*必输</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type='button' value='提交' name="payment"  onclick="submitFun()"></td>
+        </tr>
+    </table>
+</form>
+<a href='Merchant.html'>回商户首页</a>
+</body>
+</html>
